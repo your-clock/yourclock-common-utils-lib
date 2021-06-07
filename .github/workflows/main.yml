@@ -93,6 +93,8 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     needs: build
+    env:
+      PACKAGE_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
     steps:
       - uses: actions/checkout@v2
         with:
