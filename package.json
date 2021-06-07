@@ -1,0 +1,50 @@
+{
+  "name": "@your-clock/yourclock-common-utils-lib",
+  "version": "0.0.1",
+  "description": "Libreria utilitaria para componentes backend comunes del proyecto your-clock hecha sobre Typescript",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "ts:node": "DEBUG=yck:* ts-node src/",
+    "build": "tsc",
+    "test": "DEBUG=yck:* mocha --timeout 10000 --require ts-node/register 'test/**/*.spec.ts' --exit",
+    "test:coverage": "DEBUG=yck:* nyc --reporter=lcov mocha --timeout 10000 --require ts-node/register 'test/**/*.spec.ts' --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-clock/yourclock-common-utils-lib.git"
+  },
+  "keywords": [
+    "typescript",
+    "your-clock",
+    "node"
+  ],
+  "author": "Your-clock",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/your-clock/yourclock-common-utils-lib/issues"
+  },
+  "homepage": "https://github.com/your-clock/yourclock-common-utils-lib#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "cache": "~/.npm"
+  },
+  "dependencies": {
+    "debug": "^4.3.1",
+    "dotenv": "^10.0.0",
+    "googleapis": "^75.0.0",
+    "nodemailer": "^6.6.1",
+    "typescript": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.18",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^8.2.2",
+    "@types/nodemailer": "^6.4.2",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.0.0"
+  }
+}
