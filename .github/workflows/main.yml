@@ -14,6 +14,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
+      PACKAGE_TOKEN: ${{ secrets.PACKAGE_TOKEN }}
       ETHEREAL_HOST: ${{ secrets.ETHEREAL_HOST }}
       ETHEREAL_PORT: ${{ secrets.ETHEREAL_PORT }}
       ETHEREAL_PWD: ${{ secrets.ETHEREAL_PWD }}
