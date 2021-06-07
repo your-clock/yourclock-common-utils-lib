@@ -1,8 +1,8 @@
-import etherealEmailModel from './EtherealEmailModel';
-import googleEmailModel from './GoogleEmailModel';
+import EtherealEmailModel from './EtherealEmailModel';
+import GoogleEmailModel from './GoogleEmailModel';
 
-export default interface setEmailModel {
+export default interface SetEmailModel {
     environment: string;
-    googleEmail?: googleEmailModel;
-    etherealEmail?: etherealEmailModel
+    googleEmail?: GoogleEmailModel;
+    etherealEmail?: EtherealEmailModel
 }

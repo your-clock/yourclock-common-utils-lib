@@ -1,6 +1,6 @@
 import { google } from 'googleapis';
 const OAuth2 = google.auth.OAuth2;
-import setEmailModel from '../../models/Email/SetEmailModel';
+import SetEmailModel from '../../models/Email/SetEmailModel';
 import debugLib from 'debug';
 import {
     Transporter,
@@ -14,7 +14,7 @@ export default class EmailService {
 
     private static transporter: Transporter;
 
-    public static async set (options: setEmailModel): Promise<any> {
+    public static async set (options: SetEmailModel): Promise<any> {
         return new Promise ((resolve, reject) => {
             let mailConfig: any;
             if(options.environment === "production"){
