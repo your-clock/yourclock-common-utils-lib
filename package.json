@@ -1,6 +1,6 @@
 {
   "name": "@your-clock/yourclock-common-utils-lib",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Libreria utilitaria para componentes backend comunes del proyecto your-clock hecha sobre Typescript",
   "main": "build/index.js",
   "types": "build/index.d.ts",

@@ -8,7 +8,7 @@ chai.should();
 describe('Email service', () => {
     it('test method set email with development', async function () {
         await EmailService.set({
-            environment: 'development',
+            environment: 'ethereal',
             etherealEmail: {
                 etherealPwd: process.env.ETHEREAL_PWD || '',
                 etherealUser: process.env.ETHEREAL_USER || '',
@@ -20,7 +20,7 @@ describe('Email service', () => {
 
     it('test method set email with test', async function () {
         await EmailService.set({
-            environment: 'test',
+            environment: 'ethereal',
             etherealEmail: {
                 etherealPwd: process.env.ETHEREAL_PWD || '',
                 etherealUser: process.env.ETHEREAL_USER || '',
@@ -40,7 +40,7 @@ describe('Email service', () => {
 
     it('test failed method set email', async function () {
         await EmailService.set({
-            environment: 'development'
+            environment: 'ethereal'
         }).catch(err => {
             console.log(err.message)
         })
@@ -48,7 +48,7 @@ describe('Email service', () => {
 
     it('test failed method set email', async function () {
         await EmailService.set({
-            environment: 'production'
+            environment: 'google'
         }).catch(err => {
             console.log(err.message)
         })

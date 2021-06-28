@@ -17,7 +17,7 @@ export default class EmailService {
     public static async set (options: SetEmailModel): Promise<any> {
         return new Promise ((resolve, reject) => {
             let mailConfig: any;
-            if(options.environment === "production"){
+            if(options.environment === "google"){
                 const myOAuth2Client = new OAuth2(
                     options.googleEmail?.idEmail,
                     options.googleEmail?.secretEmail
@@ -40,7 +40,7 @@ export default class EmailService {
                         accessToken: myAccessToken
                     }
                 };
-            }else if(options.environment === "development" || "test"){
+            }else if(options.environment === "ethereal"){
                 mailConfig = {
                     host: options.etherealEmail?.etherealHost,
                     port: options.etherealEmail?.etherealPort,

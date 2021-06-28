@@ -2,7 +2,7 @@ import EtherealEmailModel from './EtherealEmailModel';
 import GoogleEmailModel from './GoogleEmailModel';
 
 export default interface SetEmailModel {
-    environment: string;
+    environment: "google" | "ethereal";
     googleEmail?: GoogleEmailModel;
     etherealEmail?: EtherealEmailModel
 }

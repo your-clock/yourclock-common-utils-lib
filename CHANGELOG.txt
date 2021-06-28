@@ -1,0 +1,3 @@
+**UPDATES**
+
+. The email service model was changed, now you must send google or ethereal according to the service you need
